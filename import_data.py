@@ -109,7 +109,7 @@ def process_page(html_content):
 # get the html and process
 url = 'https://pris.iaea.org/PRIS/CountryStatistics/ReactorDetails.aspx?current={}'
 data = []
-for i in range(1, 50): 
+for i in range(1, 1084): 
     page = requests.get(url.format(i))
     data_row = process_page(page.text)
     data_row["id"] = i
