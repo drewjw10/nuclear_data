@@ -24,6 +24,18 @@ id_dict = {
         'element_type': 'span', 
         'id': 'MainContent_MainContent_lblDesignNetCapacity'
     },
+    'reference_unit_power': {
+        'element_type': 'span',
+        'id': 'MainContent_MainContent_lblNetCapacity'
+    },
+    'gross_capacity': {
+        'element_type': 'span',
+        'id': 'MainContent_MainContent_lblGrossCapacity'
+    },
+    'thermal_capacity': {
+        'element_type': 'span',
+        'id': 'MainContent_MainContent_lblThermalCapacity'
+    },
     'electricity_supplied': {
         'element_type': 'span', 
         'id': 'MainContent_MainContent_lblGeneration'
@@ -109,7 +121,7 @@ def process_page(html_content):
 # get the html and process
 url = 'https://pris.iaea.org/PRIS/CountryStatistics/ReactorDetails.aspx?current={}'
 data = []
-for i in range(1, 1084): 
+for i in range(1, 1085): 
     page = requests.get(url.format(i))
     data_row = process_page(page.text)
     data_row["id"] = i
