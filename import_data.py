@@ -113,11 +113,6 @@ def process_page(html_content):
         data_results[entry] = soup_wrapper(soup, id_dict[entry]["element_type"], id_dict[entry]["id"])
     return data_results
 
-# There are pages that will give "Unauthorized access" warnings. e.g. 742
-# Ultimately, 1084 is the max ID
-# It would be good to figure out if the unauthorized pages are missing data or just weird numbering
-# In the meantime, need to handle those errors
-
 # get the html and process
 url = 'https://pris.iaea.org/PRIS/CountryStatistics/ReactorDetails.aspx?current={}'
 data = []

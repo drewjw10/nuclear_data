@@ -43,4 +43,4 @@ df["Restart Date"] = df["Restart Date"].map(process_date)
 df["Permanent Shutdown Date"] = df["Permanent Shutdown Date"].map(process_date)
 df["Commercial Operation Date"] = df["Commercial Operation Date"].map(process_date)
 
-df.to_excel("iaea_dataset_processed.xlsx")
+df.to_csv("iaea_dataset_processed.csv")
